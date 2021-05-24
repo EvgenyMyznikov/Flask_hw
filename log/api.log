@@ -1,0 +1,160 @@
+2021-05-22 15:14:27,122:app:WARNING:user:2 announcements - read action failed with errors: error!!!
+2021-05-23 18:51:03,521:announcements:WARNING:registration failed with errors: JWT_SECRET_KEY or flask SECRET_KEY must be set when using symmetric algorithm "HS256"
+2021-05-23 18:53:50,974:announcements:WARNING:registration failed with errors: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "users_email_key"
+DETAIL:  Key (email)=(test1@gmail.com) already exists.
+
+[SQL: INSERT INTO users (name, email, password) VALUES (%(name)s, %(email)s, %(password)s) RETURNING users.id]
+[parameters: {'name': 'Testuser', 'email': 'test1@gmail.com', 'password': '$2b$12$PIqfMUgGtHhXRzeZJVGgQueuptm.3GQ1QR5QDMnT9/akgB/XaZLxa'}]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+2021-05-23 18:58:48,408:announcements:WARNING:registration failed with errors: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "users_email_key"
+DETAIL:  Key (email)=(test1@gmail.com) already exists.
+
+[SQL: INSERT INTO users (name, email, password) VALUES (%(name)s, %(email)s, %(password)s) RETURNING users.id]
+[parameters: {'name': 'Testuser', 'email': 'test1@gmail.com', 'password': '$2b$12$3.a4ql2fVWXq.5KmFxaWuuPppPBHumnUpNX5EHPW4G4blOdpFhok2'}]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+2021-05-23 19:06:38,521:announcements:ERROR:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/views.py", line 83, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/views.py", line 157, in dispatch_request
+    return meth(*args, **kwargs)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask_apispec/annotations.py", line 122, in wrapped
+    return wrapper(*args, **kwargs)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask_apispec/wrapper.py", line 33, in __call__
+    mv = self.marshal_result(rv, status_code)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask_apispec/wrapper.py", line 67, in marshal_result
+    return format_response(output)  # type: Response
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/json/__init__.py", line 348, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/json/__init__.py", line 129, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/json/__init__.py", line 56, in default
+    return super().default(o)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type function is not JSON serializable
+2021-05-23 19:08:54,914:announcements:WARNING:registration failed with errors: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "users_email_key"
+DETAIL:  Key (email)=(test1@gmail.com) already exists.
+
+[SQL: INSERT INTO users (name, email, password) VALUES (%(name)s, %(email)s, %(password)s) RETURNING users.id]
+[parameters: {'name': 'Testuser', 'email': 'test1@gmail.com', 'password': '$2b$12$77xqcoBvf/U39YIPtifcZ.2wgepz5kbNtWF0YaXfv45DfjLas5SYe'}]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+2021-05-23 19:12:16,797:announcements:ERROR:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/views.py", line 83, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/views.py", line 157, in dispatch_request
+    return meth(*args, **kwargs)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask_apispec/annotations.py", line 122, in wrapped
+    return wrapper(*args, **kwargs)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask_apispec/wrapper.py", line 33, in __call__
+    mv = self.marshal_result(rv, status_code)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask_apispec/wrapper.py", line 67, in marshal_result
+    return format_response(output)  # type: Response
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/json/__init__.py", line 348, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/json/__init__.py", line 129, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/json/__init__.py", line 56, in default
+    return super().default(o)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type function is not JSON serializable
+2021-05-23 23:45:39,020:announcements:ERROR:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/views.py", line 83, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/views.py", line 157, in dispatch_request
+    return meth(*args, **kwargs)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask_apispec/annotations.py", line 122, in wrapped
+    return wrapper(*args, **kwargs)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask_apispec/wrapper.py", line 33, in __call__
+    mv = self.marshal_result(rv, status_code)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask_apispec/wrapper.py", line 67, in marshal_result
+    return format_response(output)  # type: Response
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/json/__init__.py", line 348, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/json/__init__.py", line 129, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/json/__init__.py", line 56, in default
+    return super().default(o)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type function is not JSON serializable
+2021-05-23 23:50:48,690:announcements:ERROR:Exception on /profile [GET]
+Traceback (most recent call last):
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/views.py", line 83, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/views.py", line 157, in dispatch_request
+    return meth(*args, **kwargs)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask_apispec/annotations.py", line 122, in wrapped
+    return wrapper(*args, **kwargs)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask_apispec/wrapper.py", line 33, in __call__
+    mv = self.marshal_result(rv, status_code)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask_apispec/wrapper.py", line 67, in marshal_result
+    return format_response(output)  # type: Response
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/json/__init__.py", line 348, in jsonify
+    f"{dumps(data, indent=indent, separators=separators)}\n",
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/json/__init__.py", line 129, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/evgenym/PycharmProjects/ads_site/venv/lib/python3.9/site-packages/flask/json/__init__.py", line 56, in default
+    return super().default(o)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type function is not JSON serializable
