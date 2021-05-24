@@ -15,7 +15,7 @@ app.config.from_object(Config)
 
 client = app.test_client()
 
-engine = create_engine('postgresql://evgenym:17071976@localhost:5432/flask_db')
+engine = create_engine('postgresql://:@localhost:5432/flask_db')
 
 session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine))
 
